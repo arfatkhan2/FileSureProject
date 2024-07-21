@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap");
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/FontsFree-Net-SFProText-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/FontsFree-Net-SFProText-Semibold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/FontsFree-Net-SFProText-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/FontsFree-Net-SFProDisplay-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/FontsFree-Net-SFProDisplay-Semibold.ttf");
+  font-weight: 600;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+
+
+@keyframes hoverAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav-link {
+  @apply relative tracking-[-0.15px] leading-[18px] font-medium text-inherit inline-block min-w-[41px];
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  animation: hoverAnimation 0.3s forwards;
+  color: #ff5733; /* Change this color to whatever you prefer */
+}
